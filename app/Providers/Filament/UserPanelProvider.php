@@ -43,7 +43,7 @@ class UserPanelProvider extends PanelProvider
             ])
             ->middleware([
                 EncryptCookies::class,
-                AddQueuedCookiesToResponse::class,
+                AddQueuedCookiesToResponse::class,  
                 StartSession::class,
                 AuthenticateSession::class,
                 ShareErrorsFromSession::class,

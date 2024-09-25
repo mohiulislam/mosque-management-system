@@ -17,8 +17,6 @@ return new class extends Migration
             $table->text('content')->nullable();
             $table->date('publish_date')->nullable();
             $table->timestamps();
-
-            $table->foreignUuid('mosque_id')->constrained()->onDelete('cascade');
         });
     }
 

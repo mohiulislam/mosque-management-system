@@ -18,8 +18,6 @@ return new class extends Migration
             $table->dateTime('start_time')->nullable();
             $table->dateTime('end_time')->nullable();
             $table->timestamps();
-
-            $table->foreignUuid('mosque_id')->constrained()->onDelete('cascade');
         });
     }
 

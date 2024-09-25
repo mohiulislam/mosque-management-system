@@ -17,8 +17,6 @@ return new class extends Migration
             $table->date('expense_date');
             $table->text('description')->nullable();
             $table->timestamps();
-
-            $table->foreignUuid('mosque_id')->constrained()->onDelete('cascade');
         });
     }
 

@@ -19,7 +19,7 @@ return new class extends Migration
             $table->unsignedInteger('capacity')->nullable();
             $table->text('description')->nullable();
             $table->string('image')->nullable();
-            $table->foreignUuid('admin_id')->nullable()->constrained('users')->onDelete('cascade');
+            $table->foreignUuid('admin_id')->unique()->nullable()->constrained('users')->onDelete('cascade');
             $table->timestamps();
         });
     }

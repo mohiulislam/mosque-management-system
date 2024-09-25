@@ -15,10 +15,7 @@ return new class extends Migration
             $table->uuid('id')->primary();
             $table->string('name');
             $table->text('schedule')->nullable();
-            $table->unsignedInteger('max_students')->nullable();
             $table->timestamps();
-
-            $table->foreignUuid('mosque_id')->constrained()->onDelete('cascade');
             $table->foreignUuid('teacher_id')->nullable()->constrained('users')->onDelete('set null');
         });
     }

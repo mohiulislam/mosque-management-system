@@ -15,10 +15,7 @@ return new class extends Migration
             $table->uuid('id')->primary();
             $table->date('enrollment_date')->nullable();
             $table->timestamps();
-
-
             $table->foreignUuid('quran_class_id')->nullable()->constrained()->onDelete('cascade');
-            $table->foreignUuid('mosque_id')->nullable()->constrained()->onDelete('cascade');
         });
     }
 

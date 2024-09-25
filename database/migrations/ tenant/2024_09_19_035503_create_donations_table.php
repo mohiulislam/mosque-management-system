@@ -16,11 +16,9 @@ return new class extends Migration
             $table->decimal('amount', 10, 2);
             $table->date('donation_date');
             $table->string('purpose')->nullable();
-
             $table->timestamps();
-
             $table->foreignUuid('user_id')->nullable()->constrained()->onDelete('cascade');
-            $table->foreignUuid('mosque_id')->nullable()->constrained()->onDelete('set null');
+
         });
     }
 
